@@ -133,7 +133,7 @@ If blob versioning and blob soft delete are both enabled for a storage account, 
 
 ### Deleting a blob or version
 
-If versioning and soft delete are both enabled for a storage account, then when you delete a blob, the current version of the blob becomes a previous version. No new version is created and no soft-deleted snapshots are created. The soft delete retention period is not in effect for the deleted blob.
+If versioning and soft delete are both enabled for a storage account, then when you delete a blob, the current version of the blob becomes a previous version. No new version is created and no soft-deleted snapshots are created. The soft delete retention period is not in effect for the deleted blob. Therefore, the deleted blob will stay forever. To remove it please leverage life cycle management.    
 
 Soft delete offers additional protection for deleting blob versions. When you delete a previous version of the blob, that version is soft-deleted. The soft-deleted version is preserved until the soft delete retention period elapses, at which point it is permanently deleted.
 
